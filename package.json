@@ -1,0 +1,11 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "creating my first todo-list",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "author": "DmitriyYaryshev",
+  "license": "ISC"
+}
