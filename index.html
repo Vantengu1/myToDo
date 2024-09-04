@@ -3,20 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/icons/icon.jpg" type="image/jpg">
+    <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="./node_modules/reset.css/reset.css">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <title>myToDo</title>
 </head>
 <body>
     <header class="header">
-        <h1>myToDo</h1>
+        <div class="container header__container">
+            <h1>myToDo</h1>
+            <nav class="menu">
+                <ul>
+                    <li class="menu__list">
+                        <a href="#section1" class="menu__link">Today</a>
+                    </li>
+                    <li class="menu__list">
+                        <a href="#section2" class="menu__link">Tomorrow</a>
+                    </li>
+                    <li class="menu__list">
+                        <a href="#section3" class="menu__link">On the week</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main class="main">
-        <form action="addTask" id="addTask">
+        <div class="container main__container">
+            
+            <form action="addTask" id="addTask">
+                <input type="text" placeholder="add task">
+                <select id="staus">
+                    <option value="today">Today</option>
+                    <option value="tomorrow">Tomorrow</option>
+                    <option value="onTheWeek">On the week</option>
+                </select>
+                <div class="button-form">
+                    <button type="submit">Add task</button>
+                </div>
+            </form>
 
-        </form>
+            <div class="section_date">
+                <section id="section1" class="section1">
+                    <h2>Today</h2>
+                </section>
+                <section id="section2" class="section2">
+                    <h2>Tomorrow</h2>
+                </section>
+                <section id="section3" class="section3">
+                    <h2>On the week</h2>
+                </section>
+            </div>
+
+            <ul id="list"></ul>
+            <div class="counter">
+                <p>Tasks: <span>0</span></p>
+            </div>
+        </div>
     </main>
     <footer class="footer">
-        <h3>Ты ничего не забыл сделать?</h3>
+        <div class="container footer__container">
+            <h3>Have you done everything?</h3>
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>
