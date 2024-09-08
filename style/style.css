@@ -7,6 +7,9 @@ body {
     font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
@@ -53,6 +56,8 @@ h1 {
     padding-right: 0px;
 }
 
+
+
 /* Форма для добавления задачи */
 #addTask {
     max-width: 900px;
@@ -69,20 +74,20 @@ h1 {
 
 #addTask input {
     width: 300px;
-    padding: 8px 20px;
+    padding: 12px 20px;
     border: 2px solid #000000;
     border-radius: 100px;
 }
-#addTask #staus {
+#addTask #status {
     max-width: 150px;
-    padding: 8px 10px;
+    padding: 12px 10px;
     border: 2px solid #000000;
     box-shadow: 0px 3px 5px rgb(0 0 0 / 0.2);
     border-radius: 5px;
 }
 #addTask button {
     width: 150px;
-    padding: 8px 10px;
+    padding: 12px 10px;
     color: aliceblue;
     border: 1px solid #000000;
     background-color: #a32c2c;
@@ -97,86 +102,10 @@ h1 {
     bottom: -3px;
 }
 
-/* Секции с задачами */
-.section_date {
-    margin: 20px auto 20px auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-section {
-    width: 220px;
-    min-height: 80px;
-    margin: 10px 20px;
-    padding: 10px 20px;
-}
-
-h2 {
-    font-family: "Roboto Mono", monospace;
-    font-weight: 700;
-    font-size: 20px;
-}
-
-#list {
-    list-style-type: none;
-    padding: 0;
-}
-#list li {
-    padding: 5px 10px;
-    border: 1px solid #000000;
-    border-radius: 100px;
-    background-color: antiquewhite;
-}
-.checkbox {
-    margin: 5px;
-    width: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-li p {
-    padding-left: 5px;
-}
-.checkbox-input {
-  appearance: none;
-  position: relative;
-  width: 30px;
-  height: 30px;
-  background: #C56FFF;
-  box-shadow: inset 0 0 5px rgb(0 0 0 / 0.2);
-  border-radius: 10px;
-  border: 1px solid #640e0e;
-  transition: 500ms;
-}
-.checkbox-input::after {
-  content: "\2714";
-  position: absolute;
-  top: -5px;
-  left: 2px;
-  width: 0px;
-  height: 0px;
-  font-size: 26px;
-  transition: 500ms;
-  overflow: hidden;
-}
-.checkbox-input:checked::after {
-  width: 30px;
-  height: 30px;
-  transition: 500ms;
-}
-.checkbox-input:disabled {
-  background: #ccc;
-  border-color: #ccc;
-}
-.checkbox-input:disabled::after {
-  filter: grayscale(100%);
-}
-
+/* Счётчик задач */
 
 .counter {
-    position: fixed;
-    bottom: 80px;
+    margin: 20px 10px 10px 10px;
     width: 100px;
 }
 .counter p {
@@ -184,9 +113,108 @@ li p {
     font-weight: 600;
 }
 
+
+/* Секции с задачами */
+.section_date {
+    margin: 10px auto 20px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+section {
+    width: 92%;
+    min-height: 80px;
+    margin: 10px 10px;
+    padding: 10px 20px;
+}
+
+h2 {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.block__section {
+    width: 100%;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    min-height: 50px;
+}
+
+#list {
+    list-style-type: none;
+    padding: 10px;
+}
+#list li {
+    display: flex;
+    justify-content: start;
+    padding: 6px 10px 5px 10px;
+    border: 1.5px solid #000000;
+    border-radius: 10px;
+    margin: 0 1%;
+    background-color: rgb(255, 218, 172);
+    margin-top: 10px;
+}
+#list li:first-child {
+    margin-top: 5px;
+}
+.radio {
+    margin: auto 0px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+li p {
+    margin: auto 0;
+    padding: 10px 5px;
+}
+li button {
+    background: none;
+    border: none;
+}
+#radio-input {
+  appearance: none;
+  position: relative;
+  width: 26px;
+  height: 26px;
+  background: #000000;
+  box-shadow: inset 0 0 5px rgb(0 0 0 / 0.2);
+  border-radius: 50%;
+  border: 1px solid #640e0e;
+  transition: 500ms;
+}
+#radio-input::after {
+  content: "\2714";
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  width: 0px;
+  height: 0px;
+  font-size: 26px;
+  transition: 500ms;
+  overflow: hidden;
+}
+#radio-input:checked::after {
+  width: 30px;
+  height: 30px;
+  transition: 500ms;
+}
+#radio-input:disabled {
+  background: #ccc;
+  border-color: #ccc;
+}
+#radio-input:disabled::after {
+  filter: grayscale(100%);
+}
+
+
 .footer {
-    position: absolute;
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
+    margin-top: auto;
     width: 100%;
     height: 60px;
     background-color: aquamarine;

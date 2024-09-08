@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,8 +35,8 @@
         <div class="container main__container">
             
             <form action="addTask" id="addTask">
-                <input type="text" placeholder="add task">
-                <select id="staus">
+                <input id="task" type="text" placeholder="add task">
+                <select id="status">
                     <option value="today">Today</option>
                     <option value="tomorrow">Tomorrow</option>
                     <option value="onTheWeek">On the week</option>
@@ -46,22 +46,31 @@
                 </div>
             </form>
 
+            <div class="counter">
+                <p>Tasks: <span id="taskCount">0</span></p>
+            </div>
+
             <div class="section_date">
                 <section id="section1" class="section1">
                     <h2>Today</h2>
+                    <div class="block__section">
+                        <ul id="list"></ul>
+                    </div>
                 </section>
-                <section id="section2" class="section2">
+                <!-- <section id="section2" class="section2">
                     <h2>Tomorrow</h2>
+                    <div class="block__section">
+                        <ul id="list"></ul>
+                    </div>
                 </section>
                 <section id="section3" class="section3">
                     <h2>On the week</h2>
+                    <div class="block__section">
+                        <ul id="list"></ul>
+                    </div> -->
                 </section>
             </div>
 
-            <ul id="list"></ul>
-            <div class="counter">
-                <p>Tasks: <span>0</span></p>
-            </div>
         </div>
     </main>
     <footer class="footer">
