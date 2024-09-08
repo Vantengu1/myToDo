@@ -244,8 +244,7 @@ h3 {
 
 /* Mobile 380px */
 @media (max-width: 380px) {
-    body {
-        background-color:rgba(0, 0, 0, .5);
+    .container {
         background-image: url(../images/380px/forest.jpg);
 
     }
