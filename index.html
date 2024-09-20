@@ -16,7 +16,8 @@
     <header class="header">
         <div class="container header__container">
             <h1>myToDo</h1>
-            <nav class="menu">
+            <!-- Недоделанное меню -->
+            <!-- <nav class="menu">
                 <ul>
                     <li class="menu__list">
                         <a href="#section1" class="menu__link">Today</a>
@@ -28,7 +29,7 @@
                         <a href="#section3" class="menu__link">On the week</a>
                     </li>
                 </ul>
-            </nav>
+            </nav> -->
         </div>
     </header>
     <main class="main">
@@ -36,11 +37,6 @@
             
             <form action="addTask" id="addTask">
                 <input id="task" type="text" placeholder="add task">
-                <select id="status">
-                    <option value="today">Today</option>
-                    <option value="tomorrow">Tomorrow</option>
-                    <option value="onTheWeek">On the week</option>
-                </select>
                 <div class="button-form">
                     <button type="submit">Add task</button>
                 </div>
@@ -52,22 +48,10 @@
 
             <div class="section_date">
                 <section id="section1" class="section1">
-                    <h2>Today</h2>
+                    <h2>My tasks:</h2>
                     <div class="block__section">
                         <ul id="list"></ul>
                     </div>
-                </section>
-                <!-- <section id="section2" class="section2">
-                    <h2>Tomorrow</h2>
-                    <div class="block__section">
-                        <ul id="list"></ul>
-                    </div>
-                </section>
-                <section id="section3" class="section3">
-                    <h2>On the week</h2>
-                    <div class="block__section">
-                        <ul id="list"></ul>
-                    </div> -->
                 </section>
             </div>
 
