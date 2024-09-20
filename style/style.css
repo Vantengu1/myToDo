@@ -15,7 +15,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: rgb(245, 234, 220);
+    /* background-color: rgb(245, 234, 220); */
+    background-color:rgba(0, 95, 119, 0.5);
 }
 
 .container {
@@ -245,8 +246,7 @@ h3 {
 /* Mobile 380px */
 @media (max-width: 380px) {
     body {
-        background-color:rgba(0, 0, 0, .5);
-        background-image: url(../images/380px/forest.jpg);
+        background-color:rgba(0, 95, 119, 0.5);
 
     }
     #addTask input {
@@ -265,5 +265,7 @@ h3 {
     }
     .block__section {
         border: 1px solid #ffffff;
+        max-height: 200px;
+        scrollbar-width: 0.5px;
     }
 }
