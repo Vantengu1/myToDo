@@ -28,8 +28,8 @@ function renderTask() {
 }
 
 
-function addTask(e) {
-    e.preventDefault();
+function addTask(event) {
+    event.preventDefault();
     const newTask = {
         task: document.getElementById('task').value
     };
