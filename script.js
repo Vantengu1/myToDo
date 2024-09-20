@@ -3,9 +3,15 @@ let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 const taskForm = document.getElementById('addTask');
 const taskList = document.getElementById('list');
 const taskCount = document.getElementById('taskCount');
+const status = document.getElementById('status');
 
 function saveTask() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
+const task1 = {
+    name1: "",
+    status1: ["today", "tomorrow", "onTheWeek"]
 }
 
 function renderTask() {
